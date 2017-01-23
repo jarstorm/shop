@@ -1,0 +1,45 @@
+footer-color = #7da96f
+body-color = #f7f7f7
+product-detail-background = white
+
+body {
+	background: body-color
+}
+
+.main-footer {
+	background: footer-color
+}
+
+.product-detail {
+	background: product-detail-background;
+	margin: 10px 10px 10px 10px;
+}
+
+.price {
+	color: red;
+}
+
+.star-rating {
+  size = 20px;
+  normal = #95A5A6;
+  selected = #F39C12;
+  
+  display: inline-block;
+  
+  span {
+    float: right;
+    width: size;
+    height: size;
+    line-height: size;
+    font-size: size;
+    color: normal;
+    text-decoration: none;
+    text-align: center;
+    transition: color .3s;        
+  } 
+
+  .selected {
+  	color: selected;
+  }
+
+}
