@@ -6,6 +6,10 @@ Meteor.publish("allProducts", function() {
     return Product.find();
 })
 
+Meteor.publish("allCompanies", function() {
+    return Company.find();
+})
+
 Meteor.publish("searchProducts", function(text) {
     return Product.find({$or: [ {description: { $regex: text, $options: '-i' }}, 
         {title: { $regex: text, $options: '-i' }}]});
