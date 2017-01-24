@@ -10,7 +10,10 @@ export default class RegisterForm extends Component {
         var passwordVar = event.target.registerPassword.value;
         Accounts.createUser({
             email: emailVar,
-            password: passwordVar
+            password: passwordVar,
+            profile: {
+	            type: 'customer'
+	        }
         }, function() {
         	FlowRouter.redirect('/');
         });    

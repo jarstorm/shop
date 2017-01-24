@@ -1,7 +1,6 @@
 import React from 'react';
 import AccountsUI from '../AccountsUI.jsx';
 import Login from '../Login.jsx';
-import ShoppingCartLink from '../ShoppingCartLink.jsx';
 
 export const MainLayout = ({content}) => (
 	<div className="main-layout">
@@ -12,10 +11,7 @@ export const MainLayout = ({content}) => (
   <ul className="nav navbar-nav pull-right">
     <li className="nav-item active">
       <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
-    </li>
-    <li className="nav-item">
-      <ShoppingCartLink />
-    </li>
+    </li>    
     <li className="nav-item">
 
       <Login />
@@ -36,7 +32,7 @@ export const MainLayout = ({content}) => (
 	<footer>
 		<div className="main-footer">
 	<hr />
-		<p>footer</p>
+		<p>footer de company</p>
 		</div>
 	</footer>
 	</div>

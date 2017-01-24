@@ -5,7 +5,6 @@ import {MainLayout} from './layouts/MainLayout.jsx';
 import MainPage from './MainPage.jsx';
 import ProductView from './ProductView.jsx';
 import CompanyView from './CompanyView.jsx';
-import ShoppingCartView from './ShoppingCartView.jsx';
 
 import LoginForm from './LoginForm.jsx';
 import RegisterForm from './RegisterForm.jsx';
@@ -47,14 +46,6 @@ FlowRouter.route('/company/:id', {
 	action(params) {
 		mount(MainLayout, {
 			content: (<CompanyView {...params}/>)
-		})
-	}
-});
-
-FlowRouter.route('/shopping-cart/:userId', {
-	action(params) {
-		mount(MainLayout, {
-			content: (<ShoppingCartView {...params}/>)
 		})
 	}
 });
