@@ -1,4 +1,5 @@
 import { Product } from '../imports/api/product.js';
+import { Order } from '../imports/api/order.js';
 import { ShoppingCart } from '../imports/api/shopping-cart.js';
 import { Company } from '../imports/api/company.js';
 import { Email } from 'meteor/email';
@@ -64,6 +65,9 @@ Meteor.methods({
         // Update database
         let cart = ShoppingCart.findOne({ userId });
         ShoppingCart.remove(cart._id);
+
+        // Insert order
+        Order.insert(cart);
 
         //Send email
         Email.send({

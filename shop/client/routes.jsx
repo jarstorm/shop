@@ -66,3 +66,13 @@ FlowRouter.route('/login', {
 		})
 	}
 });
+
+FlowRouter.notFound = {
+    // Subscriptions registered here don't have Fast Render support.
+    subscriptions: function() {
+
+    },
+    action: function() {
+    	FlowRouter.redirect('/');
+    }
+};

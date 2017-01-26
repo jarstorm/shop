@@ -3,6 +3,7 @@ import React from 'react';
 import {Company} from '../imports/api/company.js';
 import { createContainer } from 'meteor/react-meteor-data';
 import TrackerReact from 'meteor/ultimatejs:tracker-react';
+import MainPublicPage from './MainPublicPage.jsx';
 
 export class ResolutionsWrapper extends TrackerReact(React.Component) {
 
@@ -23,6 +24,11 @@ export class ResolutionsWrapper extends TrackerReact(React.Component) {
 		if (Meteor.user()) {
 			return(
 				<div>
+					<div className="btn-group" role="group" aria-label="...">
+					  <button type="button" className="btn btn-default">Left</button>
+					  <button type="button" className="btn btn-default">Middle</button>
+					  <button type="button" className="btn btn-default">Right</button>
+					</div>
 					<p>Esto es un usuario. Añadir producto</p>				
 					<ul>
 						<li>Pedidos en curso</li>
@@ -36,9 +42,7 @@ export class ResolutionsWrapper extends TrackerReact(React.Component) {
 		} else {	
 			return (
 				<div>
-					<h1>Listado de empresas</h1>				
-					
-					<p>Aqui se puede manejar la info de la tienda</p>				
+					<MainPublicPage />				
 				</div>
 			)
 		}

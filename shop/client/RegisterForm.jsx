@@ -14,8 +14,8 @@ export default class RegisterForm extends Component {
             profile: {
 	            type: 'customer'
 	        }
-        }, function() {
-        	FlowRouter.redirect('/');
+        }, function(e) {
+        	FlowRouter.redirect('/not_found');
         });    
 	}
 
